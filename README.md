@@ -18,14 +18,16 @@ import fiftyone as fo
 import fiftyone.zoo as foz
 
 dataset = foz.load_zoo_dataset(
-    "coco-2017",
+    "open-images-v7",
     split="validation",
     max_samples=50,
     shuffle=True,
+    label_types=['detections'],
+    classes=['Traffic sign']
 )
 
 foz.register_zoo_model_source("https://github.com/vinimadu/custom-fasterrcnn")
+model = foz.load_zoo_model("faster-rcnn-gtsdb-single-class",classes=['background','traffic sign'])
 
-model = foz.load_zoo_model("faster-rcnn-gtsdb-single-class")
 dataset.apply_model(model, label_field="predictions")
 ```
