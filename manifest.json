@@ -1,0 +1,33 @@
+{
+    "name": "Traffic Sign Detection Models",
+    "url": "https://github.com/vinimadu/fo_zoo_models",
+    "models": [
+        {
+            "base_name": "faster-rcnn-gtsdb-single-class",
+            "base_filename": "faster-rcnn-gtsdb-single-class.pt",
+            "description": "Faster Rcnn trained on GTSDB with single class",
+            "tags": [
+                "detection",
+                "torch"
+            ],
+            "manager": {
+                "type": "fiftyone.core.models.ModelManager",
+                "config": {
+                    "google_drive_id": "1ZIYO_jsC9qT5Zcz-nzhMn2HbuD3G8deq"
+                }
+            },
+            "size_bytes": 165740544,
+            
+            "date_added": "2022-04-12 17:49:51",
+            "requirements": {
+                "packages": ["torch", "torchvision"],
+                "cpu": {
+                    "support": true
+                },
+                "gpu": {
+                    "support": true
+                }
+            }
+        }
+    ]
+}
