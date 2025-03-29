@@ -4,7 +4,7 @@ Wrapper for Faster RCNN model for the FiftyOne Model Zoo.
 
 This model was trained on the [German Traffic Sign Detection Benchmark](https://benchmark.ini.rub.de/gtsdb_dataset.html) with a modification to detect a single class: 'traffic sign'.
 
-You can follow the tutorial in [fiftyone-pytorch_detection_training](https://github.com/voxel51/fiftyone-examples/blob/master/examples/pytorch_detection_training.ipynb) and the files provided in this repository to train your own custom Faster RCNN and add it to the FiftyOne Zoo. 
+You can follow the tutorial in [fiftyone-pytorch_detection_training](https://github.com/voxel51/fiftyone-examples/blob/master/examples/pytorch_detection_training.ipynb) and the files provided in this repository to train your custom Faster RCNN and add it to the FiftyOne Zoo. 
 
 For that, you may need to adapt the following fields in `manifest.json`:
 - `"base_name"`: Set this to a descriptive name for your model, e.g., `"faster-rcnn-gtsdb"`.
