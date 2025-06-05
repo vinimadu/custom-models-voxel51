@@ -23,7 +23,7 @@ def load_model(model_name, model_path, classes, **kwargs):
     # Consturct the specified `Model` instance, generally by importing
     # other modules in `model_dir`
 
-    config_dict = MODEL_TYPES[model_name]
+    config_dict = MODELS_CONFIG[model_name]
 
     d = dict(model_path=model_path, classes=classes)
 
@@ -46,7 +46,7 @@ class CustomModel(fout.TorchImageModel):
 
         self._model = torch.load(config.model_path,weights_only=False)
 
-MODEL_TYPES = {
+MODELS_CONFIG = {
     "faster-rcnn-gtsdb-single-class": {
         'type': 'detection',
         'entrypoint_fcn': "torchvision.models.detection.faster_rcnn.fasterrcnn_resnet50_fpn",
@@ -60,6 +60,6 @@ MODEL_TYPES = {
         "image_max_dim": 2048,
         "image_mean": [0.485, 0.456, 0.406],
         "image_std": [0.229, 0.224, 0.225],
-        "embeddings_layer": "<classifier.1"
+        "embeddings_layer": "<classifier"
     }
 }
