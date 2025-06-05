@@ -54,7 +54,7 @@ MODELS_CONFIG = {
     },
     "mobilenet_v2-torch-day-night": {
         'type': 'classification',
-        'entrypoint_fcn': "torchvision.models.detection.faster_rcnn.fasterrcnn_resnet50_fpn",
+        'entrypoint_fcn': "torchvision.models.mobilenet.mobilenet_v2",
         'output_processor_cls': "fiftyone.utils.torch.ClassifierOutputProcessor",
         "image_min_dim": 224,
         "image_max_dim": 2048,
