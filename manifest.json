@@ -28,6 +28,35 @@
                     "support": true
                 }
             }
+        },
+        {
+            "base_name": "mobilenet_v2-torch-day-night",
+            "base_filename": "mobilenetv2_day_night.pth",
+            "description": "MobileNetV2 model from `MobileNetV2: Inverted Residuals and Linear Bottlenecks <https://arxiv.org/abs/1801.04381>`_ trained on https://www.kaggle.com/datasets/raman77768/day-time-and-night-time-road-images",
+            "source": "https://pytorch.org/vision/main/models.html",
+            "license": "BSD 3-Clause",
+            "manager": {
+                "type": "fiftyone.core.models.ModelManager",
+                "config": {
+                    "google_drive_id": "1K5m3sZRwR_PxPSSCwmpP0Tyc_ENeCwfB"
+                }
+            },
+            "requirements": {
+                "packages": ["torch", "torchvision"],
+                "cpu": {
+                    "support": true
+                },
+                "gpu": {
+                    "support": true
+                }
+            },
+            "tags": [
+                "classification",
+                "embeddings",
+                "logits",
+                "torch",
+                "mobilenet"
+            ]
         }
     ]
 }
