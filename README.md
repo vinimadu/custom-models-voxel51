@@ -26,7 +26,7 @@ dataset = foz.load_zoo_dataset(
     classes=['Traffic sign']
 )
 
-foz.register_zoo_model_source("https://github.com/vinimadu/custom-fasterrcnn")
+foz.register_zoo_model_source("https://github.com/vinimadu/custom-models-voxel51")
 model = foz.load_zoo_model("faster-rcnn-gtsdb-single-class",classes=['background','traffic sign'])
 
 dataset.apply_model(model, label_field="predictions")
