@@ -57,6 +57,35 @@
                 "torch",
                 "mobilenet"
             ]
+        },
+         {
+            "base_name": "resnet18-torch-day-night",
+            "base_filename": "resnet18_day_night.pth",
+            "description": "ResNet-18 model from `Deep Residual Learning for Image Recognition <https://arxiv.org/abs/1512.03385>`_ trained on https://www.kaggle.com/datasets/raman77768/day-time-and-night-time-road-images",
+            "source": "https://pytorch.org/vision/main/models.html",
+            "license": "BSD 3-Clause",
+            "manager": {
+                "type": "fiftyone.core.models.ModelManager",
+                "config": {
+                    "google_drive_id": "1sVGkjWUWZ5WVY1O9Pz4Zj0a3i5L_-DWj"
+                }
+            },
+            "requirements": {
+                "packages": ["torch", "torchvision"],
+                "cpu": {
+                    "support": true
+                },
+                "gpu": {
+                    "support": true
+                }
+            },
+            "tags": [
+                "classification",
+                "embeddings",
+                "logits",
+                "torch",
+                "mobilenet"
+            ]
         }
     ]
 }
