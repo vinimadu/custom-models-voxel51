@@ -47,6 +47,13 @@ class CustomModel(fout.TorchImageModel):
         device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         self._model = torch.load(config.model_path,weights_only=False,map_location=device)
 
+        fout.TorchEmbeddingsMixin.__init__(
+            self,
+            self._model,
+            layer_name=config.embeddings_layer,
+            as_feature_extractor=config.as_feature_extractor,
+        )
+
 MODELS_CONFIG = {
     "faster-rcnn-gtsdb-single-class": {
         'entrypoint_fcn': "torchvision.models.detection.faster_rcnn.fasterrcnn_resnet50_fpn",
